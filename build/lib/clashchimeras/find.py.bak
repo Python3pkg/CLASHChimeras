@@ -160,7 +160,7 @@ def main():
                     overlap=args.overlap,
                     gap=args.gap)
 
-    common = set(smallRNA.records.keys()).intersection(list(targetRNA.records.keys()))
+    common = set(smallRNA.records.keys()).intersection(targetRNA.records.keys())
 
     logger.info('Determining chimeras')
 

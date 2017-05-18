@@ -38,7 +38,7 @@ def chimeraOrNot(bitOne, bitTwo, overlap=4, gap=9):
             combinedCigar += "+"
         else:
             combinedCigar += "*"
-    numberOfMs = len(list(filter(lambda x: x == "=", combinedCigar)))
+    numberOfMs = len(list([x for x in combinedCigar if x == "="]))
     curlyStartStart = combinedCigar.find("{")
     curlyStartEnd = combinedCigar.rfind("{")
     curlyEndStart = combinedCigar.find("}")
